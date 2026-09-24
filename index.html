@@ -1,76 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+  </head>
+  <body>
     <header>
-       
-        <nav>
-            <a href="#telefono">telefono</a>
-            <a href="#email">email</a>
-            <a href="#direccion">direccion</a>
-            <a href="#formulario-de-inscripcion">formulario de inscripcion</a>
-
-          
-        </nav>
-          <div id="logo">
-                <img src="/assets/img/logo-club.png" alt="">
-                
-            </div>
-        
+      <nav>
+        <a id="logo" href="index.html"
+          ><img src="/assets/img/logo-club.webp" alt=""
+        /></a>
+        <a href="tel:+34645676987"><i class="fa-solid fa-phone"></i>+34 645 67 69 87</a>
+        <a href="apatacoja-montañeros@gmail.com"><i class="fa-solid fa-square-envelope"></i>apatacoja-montañeros@gmail.com</a>
+        <a href="https://maps.app.goo.gl/Ps1vS6Fa8XXHBqvt8" target="_blank"><i class="fa-solid fa-location-dot"></i>c/del olivo s/n</a>
+        <div>
+            <a href="#inscripciones" class="button">inscripciones</a>
+        </div>
+      </nav>
     </header>
     <main>
-        <section id="club-de-montaña-a-pata-coja">
-            <h1>club de montaña a pata coja</h1>
-        </section>
-        <section id="cursos-de-escalada">
+      <div class="leyenda">
+        <h2>
+          Nuestro club nace en 2010 con un unico sueño disfrutar de la
+          naturaleza en todas sus variantes ¡únete a nosotros y comparte con
+          nosotros el camino!
+        </h2>
+        <h3>
+          vente con nosotros a san fernando un ratito a pie y otro caminando...
+        </h3>
+      </div>
+      <section id="club-de-montana-a-pata-coja">
+        <h1>club de montaña a pata coja</h1>
+      </section>
+      <section id="cursos">
+        <h2>cursos</h2>
+        <div class="cursos">
+          <div class="tarjeta-cursos">
+            <img src="assets/img/curso-de-escalada.jpg" alt="" />
             <h2>cursos de escalada</h2>
-            <div class="cursos-de-escalada">
-                <div class="tarjeta-cursos-de-escalada">
-                    <img src="/assets/img/curso-de-escalada.jpg" alt="">
-                </div>
-            </div>
-            <section id="rutas-guiadas">
-                <h2>rutas guiadas</h2>
-                <div class="rutas-guiadas">
-                    <div class="tarjeta-rutas-guiadas">
-                        <img src="/assets/img/grupos-guiados.jpg" alt="">
-                    </div>
-                </div>
-            </section>
-            <section id="rapel">
-                <h2>rapel</h2>
-                <div class="rapel">
-                    <div class="tarjeta-rapel">
-                        <img src="/assets/img/rappel.jpg" alt="">
-                    </div>
-                </div>
-                <section id="barranquismo">
-                    <h2>barranquismo</h2>
-                    <div class="barranquismo">
-                        <div class="tarjeta-barranquismo">
-                            <img src="/assets/img/barranquismo.jpg" alt="">
-
-                        </div>
-                    </div>
-
-                </section>
-
-            </section>
-
-        </section>
+            <p>atrevete a llegar a lo mas alto</p>
+            <a href="curso-escalada.html">
+              <button>ver mas</button>
+            </a>
+          </div>
+          <div class="tarjeta-cursos">
+            <img src="assets/img/barranquismo.jpg" alt="" />
+            <h2>barranquismo</h2>
+            <p>
+              ¡mòjate! y desciente por los rios mas impresionantes de granada
+            </p>
+            <button>ver mas</button>
+          </div>
+          <div class="tarjeta-cursos">
+            <img src="assets/img/excursionismo.jpg" alt="" />
+            <h2>rutas guiadas</h2>
+            <p>
+              descrube de la manos de nuestros guias los rincones mas bonitos de
+              las sierras granadina
+            </p>
+            <button>ver mas</button>
+          </div>
+          <div class="tarjeta-cursos">
+            <img src="assets/img/rappel.jpg" alt="" />
+            <h2>rapel</h2>
+            <p>!!!Si no te atreves a subir¡¡¡ ¡¡¡Atrévete a bajar!!!</p>
+            <button>ver mas</button>
+          </div>
+        </div>
+      </section>
+      <form action="" id="inscripciones">
+        <div class="campo-formulario">
+            <label for="nombre">NOMBRE:</label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+          <div class="campo-formulario">
+            <label for="apellidos">apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos">
+        </div>
+         <div class="campo-formulario">
+            <label for="edad">edad:</label>
+            <input type="text" name="edad" id="edad">
+        </div>
+               <div class="campo-formulario">
+            <label for="telefono">telefono:</label>
+            <input type="text" name="telefono" id="telefono">
+        </div>
+                <div class="campo-formulario">
+            <label for="email">email:</label>
+            <input type="text" name="email" id="email">
+        </div>
+                <div class="campo-formulario">
+            <label for="curso">curso:</label>
+            <input type="text" name="curso" id="curso">
+        </div>
+        <div class="campo-formulario">
+            <label for="comentarios">dinos el curso al que te gustaria apuntarte y nos pondremos en cantacto contigo lo antes posible</label>
+            <textarea name="comentarios" id="comentarios" rows="5" maxlength="300"></textarea>
+        </div>
+        <button type="submit" class="boton-form">solicitar</button>
+      </form>
     </main>
     <footer id="footer">
-        <div>
-                <h2>nuestro club nace en 2010 con un unico sueño disfrutar de la naturaleza en todas sus variantes ¡únete a nosotros y comparte con nosotros el camino!</h2>
-            <h3>vente con nosotros a san fernando un ratito a pie y otro caminando...</h3>
-        </div>
-
+      <div class="redes-sociales">
+        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+        <a href=""><i class="fa-brands fa-telegram"></i></a>
+      </div>
+      <div class="politicas">
+        <a href="#">politicas de privacidad</a>
+        <a href="#">aviso legal</a>
+        <a href="#">politica de cookies</a>
+      </div>
+      
     </footer>
-    
-</body>
+  </body>
 </html>

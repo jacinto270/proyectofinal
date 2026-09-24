@@ -1,6 +1,6 @@
 *{
-    margin: o;
-    padding: o;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 header{
@@ -10,15 +10,193 @@ header{
     flex-direction: row;
     align-items: baseline;
     flex-wrap: wrap;
-    position: fixed;
-    top: o;
-    z-index: 1000;
-    background-color: white;
+    top: 0;
+    z-index: 1000; 
     width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sierra-nevada-fondo-de-pantalla.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #logo{
     width: 200px;
+    display: inline-block;
 }
 #logo img{
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.696);
+    border-radius: 50%;
+}
+nav {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a{
+
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+
+}
+
+h1{
+  text-align: center;
+  background-color: rgb(101, 154, 154);
+  font-family: 'Times New Roman', Times, serif;
+}
+.leyenda{
+  padding: 1rem;
+  text-align: center;
+  background-color: aquamarine;
+}
+.cursos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2%;
+  grid-auto-rows: 1fr;
+
+ 
+}
+#cursos {
+  padding: 2%;
+  text-align: center;
+  background-color: #37d3e72a;
+  
+}
+
+#cursos h2 {
+
+  text-align:center ;
+  font-size: 1.5rem;
+
+  padding: 1rem;
+  
+}
+
+.tarjeta-cursos img {
+
+  width: 100%;
+}
+.tarjeta-cursos {
+  border: solid 1px;
+  color: #889df1;
+  border-radius: 10px;
+  box-shadow: 8px 8px 17px 5px;
+  color: rgb(21, 66, 47);
+  display: flex;
+  flex-direction: column;
+  background-color: floralwhite;
+  overflow: hidden;
+  
+  text-align: center;
+  flex: 1;
+}
+.tarjeta-cursos p{
+  margin: 0.5rem;
+
+}
+
+
+.tarjeta-cursos button{
+  margin-top: auto;
+  background-color: rgb(71, 132, 170);
+  color: rgb(232, 223, 121);
+  padding: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 80%;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0.5rem;
+  border: none;
+}
+.tarjeta-cursos button:hover{
+  background-color: var(--color-principal-acent);
+  transform: translateY(-2px);
+  color: black;
+}
+.button{
+  margin: 2rem;
+  padding: 3rem;
+  background-color: darkgoldenrod;
+  border-radius: 60%;
+
+}
+.button:hover{
+  background-color: rgb(245, 205, 106);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgb(208, 223, 239);
+}
+.campo-formulario{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+input {
+    padding: 0.3rem;
+    border: none;
+   
+
+}
+
+.boton{
+   margin-top: auto;
+  background-color: rgb(71, 132, 170);
+  color: rgb(232, 223, 121);
+  padding: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 80%;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0.5rem;
+  border: none;
+  
+}
+form button{
+  background-color: rgb(71, 132, 170);
+  color: rgb(232, 223, 121);
+  padding: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 80%;
+  margin-bottom: 0.5rem;
+  border: none;
+  margin: 1rem auto;
+}
+footer{
+padding: 2rem;
+
+}
+.redes-sociales{
+  display: flex;
+  justify-content: space-around;
+  
+  
+
+}
+.redes-sociales a{
+  font-size: 2rem;
+  color: rgb(62, 67, 235);
+}
+.politicas{
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  padding: 2rem;
+
 }
