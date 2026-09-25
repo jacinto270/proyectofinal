@@ -17,19 +17,27 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.nav-menu{
+  align-items: center;
+  margin-top: 1rem;
+}
 #logo{
     width: 200px;
     display: inline-block;
+    margin-top: 1rem;
 }
 #logo img{
     width: 100%;
     background-color: rgba(255, 255, 255, 0.696);
     border-radius: 50%;
 }
+
+
 nav {
   width: 100%;
   display: flex;
   gap: 2rem;
+  margin-top: 1rem;
 }
 
 nav a{
@@ -120,9 +128,9 @@ h1{
 }
 .button{
   margin: 2rem;
-  padding: 3rem;
+  padding: 1rem;
   background-color: darkgoldenrod;
-  border-radius: 60%;
+  border-radius: 20%
 
 }
 .button:hover{
@@ -168,7 +176,7 @@ input {
 }
 form button{
   background-color: rgb(71, 132, 170);
-  color: rgb(232, 223, 121);
+  color: rgb(224, 208, 28);
   padding: 0.5rem;
   text-transform: uppercase;
   cursor: pointer;
@@ -180,6 +188,7 @@ form button{
 }
 footer{
 padding: 2rem;
+background-color: beige;
 
 }
 .redes-sociales{

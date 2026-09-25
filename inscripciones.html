@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/curso-escalada.css">
-
+    <link rel="stylesheet" href="assets/css/inscripciones.css">
     <link rel="stylesheet" href="/assets/css/tablas.css" />
     <link
       rel="stylesheet"
@@ -15,6 +14,7 @@
   </head>
 
   <body>
+    
     <header>
       <nav>
         <a id="logo" href="index.html"
@@ -29,7 +29,7 @@
           </div>
 
           <div>
-            <a href="apatacoja-montañeros@gmail.com"
+            <a href="mailto:apatacoja-montañeros@gmail.com"
               ><i class="fa-solid fa-square-envelope"></i
               >apatacoja-montañeros@gmail.com</a
             >
@@ -56,24 +56,41 @@
       </nav>
     </header>
     <main>
-      <div class="texto-vente">
-        <h2>¡¡¡vente con nosotros y sube a lo mas alto¡¡¡</h2>
+      
+      <form action="" id="inscripciones">
+      <div class="campo-formulario">
+        <label for="nombre">NOMBRE:</label>
+        <input type="text" name="nombre" id="nombre">
       </div>
+      <div class="campo-formulario">
+        <label for="apellidos">apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos">
+      </div>
+      <div class="campo-formulario">
+        <label for="edad">edad:</label>
+        <input type="text" name="edad" id="edad">
+      </div>
+      <div class="campo-formulario">
+        <label for="telefono">telefono:</label>
+        <input type="text" name="telefono" id="telefono">
+      </div>
+      <div class="campo-formulario">
+        <label for="email">email:</label>
+        <input type="text" name="email" id="email">
+      </div>
+      <div class="campo-formulario">
+        <label for="curso">curso:</label>
+        <input type="text" name="curso" id="curso">
+      </div>
+      <div class="campo-formulario">
+        <label for="comentarios">dinos el curso al que te gustaria apuntarte y nos pondremos en cantacto contigo lo
+          antes posible</label>
+        <textarea name="comentarios" id="comentarios" rows="5" maxlength="300"></textarea>
+      </div>
+      <button type="submit" class="boton-form">solicitar</button>
+    </form>
 
-      <table id="table">
-        <tr>
-          <th>nivel</th>
-          <th>duracion</th>
-          <th>fecha de inicio</th>
-          <th>lugar</th>
-        </tr>
-        <tr>
-          <td class="marron">principiante</td>
-          <td class="marron">3 meses</td>
-          <td class="marron">septiembre</td>
-          <td class="marron">Monachil-Granada</td>
-        </tr>
-      </table>
+     
     </main>
     <footer id="footer">
       <div class="redes-sociales">
