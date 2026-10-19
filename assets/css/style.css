@@ -1,211 +1,189 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-header{
-    display: flex;
-    align-content: center;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: baseline;
-    flex-wrap: wrap;
-    top: 0;
-    z-index: 1000; 
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sierra-nevada-fondo-de-pantalla.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.nav-menu{
-  align-items: center;
-  margin-top: 1rem;
-}
-#logo{
-    width: 200px;
-    display: inline-block;
-    margin-top: 1rem;
-}
-#logo img{
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.696);
-    border-radius: 50%;
+/* ===================================================================
+   style.css — Página de inicio
+   =================================================================== */
+
+/* Hero a pantalla completa */
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: min(82vh, 680px);
+  padding-block: 4rem;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
 }
 
-
-nav {
+.hero > img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgb(4 22 26 / 0.35) 0%, rgb(4 22 26 / 0.78) 100%);
+}
+
+.hero-contenido {
+  max-width: 760px;
+}
+
+.hero .antetitulo {
+  color: #fdba74;
+}
+
+.hero h1 {
+  color: #fff;
+  text-shadow: 0 2px 20px rgb(0 0 0 / 0.35);
+}
+
+.hero-lema {
+  margin-top: 1.2rem;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: rgb(255 255 255 / 0.92);
+}
+
+.hero-cita {
+  margin-top: 0.8rem;
+  font-style: italic;
+  color: rgb(255 255 255 / 0.75);
+}
+
+.hero-acciones {
   display: flex;
-  gap: 2rem;
-  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 2rem;
 }
 
-nav a{
-
-  color: white;
-  text-decoration: none;
-  text-transform: capitalize;
-
-}
-
-h1{
-  text-align: center;
-  background-color: rgb(101, 154, 154);
-  font-family: 'Times New Roman', Times, serif;
-}
-.leyenda{
-  padding: 1rem;
-  text-align: center;
-  background-color: aquamarine;
-}
+/* Tarjetas de cursos */
 .cursos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2%;
-  grid-auto-rows: 1fr;
-
- 
-}
-#cursos {
-  padding: 2%;
-  text-align: center;
-  background-color: #37d3e72a;
-  
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
 }
 
-#cursos h2 {
+.tarjeta-cursos {
+  display: flex;
+  flex-direction: column;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  text-align:center ;
-  font-size: 1.5rem;
-
-  padding: 1rem;
-  
+.tarjeta-cursos:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-alta);
 }
 
 .tarjeta-cursos img {
-
   width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
-.tarjeta-cursos {
-  border: solid 1px;
-  color: #889df1;
-  border-radius: 10px;
-  box-shadow: 8px 8px 17px 5px;
-  color: rgb(21, 66, 47);
-  display: flex;
-  flex-direction: column;
-  background-color: floralwhite;
+
+.tarjeta-cursos:hover img {
+  transform: scale(1.05);
+}
+
+.tarjeta-imagen {
   overflow: hidden;
-  
-  text-align: center;
+}
+
+.tarjeta-cuerpo {
+  display: flex;
   flex: 1;
-}
-.tarjeta-cursos p{
-  margin: 0.5rem;
-
-}
-
-
-.tarjeta-cursos button{
-  margin-top: auto;
-  background-color: rgb(71, 132, 170);
-  color: rgb(232, 223, 121);
-  padding: 0.5rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 80%;
-  width: 50%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 0.5rem;
-  border: none;
-}
-.tarjeta-cursos button:hover{
-  background-color: var(--color-principal-acent);
-  transform: translateY(-2px);
-  color: black;
-}
-.button{
-  margin: 2rem;
-  padding: 1rem;
-  background-color: darkgoldenrod;
-  border-radius: 20%
-
-}
-.button:hover{
-  background-color: rgb(245, 205, 106);
-}
-form {
-  display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: rgb(208, 223, 239);
-}
-.campo-formulario{
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-    padding: 0.5rem;
+  gap: 0.6rem;
+  padding: 1.3rem;
 }
 
-input {
-    padding: 0.3rem;
-    border: none;
-   
-
+.tarjeta-cuerpo p {
+  color: var(--texto-suave);
 }
 
-.boton{
-   margin-top: auto;
-  background-color: rgb(71, 132, 170);
-  color: rgb(232, 223, 121);
-  padding: 0.5rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 80%;
-  width: 50%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 0.5rem;
-  border: none;
-  
+.tarjeta-cuerpo .boton {
+  margin-top: auto;
+  align-self: flex-start;
 }
-form button{
-  background-color: rgb(71, 132, 170);
-  color: rgb(224, 208, 28);
-  padding: 0.5rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 80%;
-  margin-bottom: 0.5rem;
-  border: none;
-  margin: 1rem auto;
-}
-footer{
-padding: 2rem;
-background-color: beige;
 
+/* Por qué elegirnos */
+.ventajas-fondo {
+  background: var(--superficie-2);
 }
-.redes-sociales{
+
+.ventajas {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+}
+
+.ventaja {
+  padding: 1.6rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+
+.ventaja i {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  color: var(--primario);
+  background: var(--primario-suave);
+  border-radius: 14px;
+}
+
+.ventaja p {
+  margin-top: 0.4rem;
+  color: var(--texto-suave);
+}
+
+/* Banda final de llamada a la acción */
+.cta {
   display: flex;
-  justify-content: space-around;
-  
-  
-
-}
-.redes-sociales a{
-  font-size: 2rem;
-  color: rgb(62, 67, 235);
-}
-.politicas{
-  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  color: black;
-  padding: 2rem;
+  gap: 1.5rem;
+  padding: clamp(1.8rem, 4vw, 3rem);
+  border-radius: var(--radio);
+  background: linear-gradient(135deg, #0f766e, #134e4a);
+  color: #fff;
+}
 
+.cta h2 {
+  color: #fff;
+}
+
+.cta p {
+  margin-top: 0.4rem;
+  color: rgb(255 255 255 / 0.85);
+}
+
+.cta .boton {
+  background: #fff;
+  border-color: #fff;
+  color: #0f3d3a;
+}
+
+.cta .boton:hover {
+  background: #fdba74;
+  border-color: #fdba74;
 }

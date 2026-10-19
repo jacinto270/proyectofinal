@@ -1,94 +1,151 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/barranquismo.css">
-    <link rel="stylesheet" href="/assets/css/tablas.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <a id="logo" href="index.html"
-          ><img src="/assets/img/logo-club.webp" alt="imagen del logo" title="imagen del logo"
-        /></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barranquismo · Club de Montaña A Pata Coja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/btn.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/tablas.css">
+  <link rel="stylesheet" href="assets/css/detalle.css">
+  <script src="assets/js/tema.js"></script>
+</head>
 
-        <div class="nav-menu">
-          <div>
-            <a href="tel:+34645676987"
-              ><i class="fa-solid fa-phone"></i>+34 645 67 69 87</a
-            >
-          </div>
+<body>
+  <header class="site-header">
+    <div class="topbar">
+      <div class="contenedor topbar-inner">
+        <a href="tel:+34645676987"><i class="fa-solid fa-phone" aria-hidden="true"></i>+34 645 67 69 87</a>
+        <a class="topbar-email" href="mailto:apatacoja-montañeros@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>apatacoja-montañeros@gmail.com</a>
+        <a href="https://maps.app.goo.gl/Ps1vS6Fa8XXHBqvt8" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>C/ del Olivo s/n</a>
+      </div>
+    </div>
+    <nav class="contenedor nav" aria-label="Principal">
+      <a id="logo" href="index.html">
+        <picture>
+          <source srcset="assets/img/logo-club.avif" type="image/avif">
+          <source srcset="assets/img/logo-club.webp" type="image/webp">
+          <img src="assets/img/logo-club.png" alt="Logo del Club de Montaña A Pata Coja" width="54" height="54">
+        </picture>
+        <span>A Pata Coja<br><small>Club de Montaña</small></span>
+      </a>
+      <div class="nav-acciones">
+        <ul id="menu" class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#cursos" aria-current="page">Cursos</a></li>
+          <li><a href="formulario.html" class="boton">Inscripciones</a></li>
+        </ul>
+        <button id="boton-tema" class="boton-icono" type="button" aria-label="Activar modo oscuro"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
+        <button id="boton-menu" class="boton-icono nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+      </div>
+    </nav>
+  </header>
 
-          <div>
-            <a href="apatacoja-montañeros@gmail.com"
-              ><i class="fa-solid fa-square-envelope"></i
-              >apatacoja-montañeros@gmail.com</a
-            >
-          </div>
+  <main>
+    <section class="banner">
+      <img src="assets/img/barranquismo2.jpg" alt="Grupo descendiendo un barranco con agua" fetchpriority="high">
+      <div class="contenedor">
+        <span class="antetitulo">Aventura acuática</span>
+        <h1>Barranquismo</h1>
+        <p>¡Desciende por los ríos más bonitos de Granada!</p>
+      </div>
+    </section>
 
-          <div>
-            <a href="https://maps.app.goo.gl/Ps1vS6Fa8XXHBqvt8" target="_blank"
-              ><i class="fa-solid fa-location-dot"></i>c/del olivo s/n</a
-            >
+    <section class="seccion">
+      <div class="contenedor detalle-intro">
+        <div>
+          <h2>Sobre la actividad</h2>
+          <p>Saltos, toboganes naturales y pequeños rápeles por los barrancos más espectaculares de la provincia. Una actividad refrescante para disfrutar en grupo.</p>
+          <p>No necesitas experiencia previa: nuestros guías te enseñan las técnicas básicas de progresión por el agua y de descenso con cuerda.</p>
+          <div class="detalle-cta">
+            <a href="formulario.html" class="boton"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>Inscribirme</a>
+            <a href="index.html#cursos" class="boton boton-sec">Ver otros cursos</a>
           </div>
         </div>
-
-         <div>
-        <a href="/index.html" class="button">inicio</a>
+        <aside class="ficha">
+          <h3>Qué incluye</h3>
+          <ul class="lista-check">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Neopreno completo</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Casco y arnés</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Guía especializado en barrancos</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Seguro de accidentes</li>
+          </ul>
+        </aside>
       </div>
+    </section>
 
+    <section class="seccion detalle-tabla">
+      <div class="contenedor">
+        <h2>Próximas fechas</h2>
+        <div class="tabla-scroll">
+          <table class="tabla">
+            <thead>
+              <tr>
+                <th scope="col">Ruta</th>
+                <th scope="col">Nivel</th>
+                <th scope="col">Duración</th>
+                <th scope="col">Fecha de inicio</th>
+                <th scope="col">Lugar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Barranquismo</td>
+                <td>Principiante</td>
+                <td>6 horas</td>
+                <td>Septiembre a mayo</td>
+                <td>Monachil (Granada)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="site-footer">
+    <div class="contenedor footer-grid">
       <div>
-        <a href="index.html#cursos" class="button">cursos</a>
+        <div class="footer-marca">
+          <img src="assets/img/logo-club.webp" alt="" width="48" height="48">
+          <span>Club de Montaña<br>A Pata Coja</span>
+        </div>
+        <p>Disfrutar de la naturaleza en todas sus variantes, en buena compañía.</p>
       </div>
-
       <div>
-        <a href="inscripciones.html" class="button">inscripciones</a>
+        <h3>Contacto</h3>
+        <ul class="footer-lista">
+          <li><a href="tel:+34645676987"><i class="fa-solid fa-phone" aria-hidden="true"></i>+34 645 67 69 87</a></li>
+          <li><a href="mailto:apatacoja-montañeros@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Escríbenos</a></li>
+          <li><a href="https://maps.app.goo.gl/Ps1vS6Fa8XXHBqvt8" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>C/ del Olivo s/n</a></li>
+        </ul>
       </div>
-      </nav>
-    </header>
-    <main>
-      <div class="texto-desciende">
-        <h2>!!!desciende por los rios mas bonitos de granada¡¡¡</h2>
+      <div>
+        <h3>Síguenos</h3>
+        <div class="redes-sociales">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
+        </div>
       </div>
-
-      <table id="table">
-        <tr>
-          <th>ruta</th>
-          <th>nivel</th>
-          <th>duracion</th>
-          <th>fecha de inicio</th>
-          <th>lugar</th>
-        
-        </tr>
-        <tr>
-          <td class="marron">barranquismo</td>
-          <td class="marron">principiante</td>
-          <td class="marron">6 horas</td>
-          <td class="marron">septiembre a mayo</td>
-          <td class="marron">Monachil-Granada</td>
-        </tr>
-      </table>
-    </main>
-    <footer id="footer">
-      <div class="redes-sociales">
-        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-        <a href=""><i class="fa-brands fa-facebook"></i></a>
-        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-        <a href=""><i class="fa-brands fa-telegram"></i></a>
-      </div>
+    </div>
+    <div class="contenedor footer-inferior">
+      <p>© <span id="anio"></span> Club de Montaña A Pata Coja</p>
       <div class="politicas">
-        <a href="#">politicas de privacidad</a>
-        <a href="#">aviso legal</a>
-        <a href="#">politica de cookies</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Aviso legal</a>
+        <a href="#">Política de cookies</a>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>

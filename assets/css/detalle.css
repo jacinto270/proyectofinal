@@ -1,0 +1,110 @@
+/* ===================================================================
+   detalle.css — Plantilla común de las páginas de cada curso
+   (escalada, barranquismo, rapel y rutas guiadas)
+   =================================================================== */
+
+/* Banner con foto */
+.banner {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(260px, 42vw, 420px);
+  padding-block: 2.5rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+.banner > img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgb(4 22 26 / 0.85), rgb(4 22 26 / 0.15));
+}
+
+.banner h1 {
+  color: #fff;
+}
+
+.banner .antetitulo {
+  color: #fdba74;
+}
+
+.banner p:last-child {
+  margin-top: 0.6rem;
+  font-size: 1.15rem;
+  color: rgb(255 255 255 / 0.9);
+}
+
+/* Introducción: texto + ficha "qué incluye" */
+.detalle-intro {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  align-items: start;
+}
+
+.detalle-intro p {
+  margin-top: 1rem;
+  color: var(--texto-suave);
+  max-width: 65ch;
+}
+
+.ficha {
+  padding: 1.6rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.ficha h3 {
+  margin-bottom: 1rem;
+}
+
+.lista-check {
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.lista-check li {
+  display: flex;
+  gap: 0.7rem;
+  align-items: baseline;
+}
+
+.lista-check i {
+  color: var(--primario);
+}
+
+.detalle-tabla h2 {
+  margin-bottom: 1.2rem;
+}
+
+.detalle-cta {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+@media (max-width: 760px) {
+  .detalle-intro {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detalle-tabla {
+  padding-top: 0;
+}

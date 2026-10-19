@@ -1,0 +1,273 @@
+/* ===================================================================
+   incripciones.css — Página del formulario (formulario.html)
+   Usa las variables de base.css, así funciona también en modo oscuro.
+   Las clases que crea app.js (.tarjeta, .destacada, .mensaje-ok…) se mantienen.
+   =================================================================== */
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px 4rem;
+}
+
+main h2 {
+  margin: 3rem 0 1rem;
+}
+
+/* Cabecera: la foto de portada ocupa todo el ancho */
+.cabecera {
+  position: relative;
+  min-height: 180px;
+  background: #0d1f1e;
+  color: #fff;
+}
+
+.cabecera img {
+  display: block;
+  width: 100%;
+  height: clamp(220px, 36vw, 400px);
+  object-fit: cover;
+}
+
+.cabecera figcaption {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  z-index: 1;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 0.45);
+}
+
+.cabecera-texto {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 3rem 16px 1.6rem;
+  background: linear-gradient(to top, rgb(4 22 26 / 0.85), transparent);
+}
+
+.cabecera-texto > * {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.marca {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fdba74;
+}
+
+.cabecera h1 {
+  margin-top: 0.2rem;
+  color: #fff;
+  font-size: clamp(1.9rem, 5vw, 3rem);
+}
+
+.cabecera h1::first-letter {
+  text-transform: uppercase;
+}
+
+/* Bloques de contenido */
+.bloque audio {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 0.8rem;
+}
+
+.bloque details {
+  margin-top: 1rem;
+  max-width: 70ch;
+  padding: 1rem 1.2rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-sm);
+}
+
+.bloque summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--primario);
+}
+
+.bloque details p {
+  margin-top: 0.8rem;
+  color: var(--texto-suave);
+}
+
+.herramientas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  margin-top: 1.5rem;
+}
+
+select,
+input {
+  font: inherit;
+  min-height: 44px;
+  padding: 0.3rem 0.8rem;
+  color: var(--texto);
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-sm);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+select:focus,
+input:focus {
+  border-color: var(--primario);
+  box-shadow: 0 0 0 3px var(--primario-suave);
+  outline: none;
+}
+
+.contador {
+  color: var(--texto-suave);
+}
+
+.aviso {
+  padding: 0.8rem 1rem;
+  border-left: 4px solid var(--error);
+  background: var(--error-fondo);
+}
+
+/* ★ Tarjetas de ruta (las crea app.js) */
+.rejilla {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+}
+
+.tarjeta {
+  padding: 1.2rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-top: 4px solid var(--primario);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.tarjeta h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.tarjeta h3::first-letter {
+  text-transform: uppercase;
+}
+
+.tarjeta p {
+  margin: 0.2rem 0;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.tarjeta .zona {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.tarjeta .completa {
+  color: var(--error);
+  font-weight: 600;
+}
+
+/* ★ Etiqueta de dificultad: <span class="nivel nivel-baja">baja</span> */
+.nivel {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nivel-baja { background: #15803d; }
+.nivel-media { background: #b45309; }
+.nivel-alta { background: #b42318; }
+
+/* ★ Efecto «ruta del mes»: app.js añade .destacada a una tarjeta */
+.tarjeta.destacada {
+  transform: scale(1.05);
+  border-color: var(--acento);
+  box-shadow:
+    0 0 0 4px var(--acento),
+    var(--sombra-alta);
+}
+
+/* Formulario */
+.formulario {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: end;
+  padding: 1.5rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.campo {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.campo label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+}
+
+/* ★ Mensaje del formulario: app.js añade .mensaje-error o .mensaje-ok */
+.mensaje {
+  min-height: 1.5em;
+  margin-top: 0.8rem;
+  font-weight: 600;
+}
+
+.mensaje-error { color: var(--error); }
+.mensaje-ok { color: var(--ok); }
+
+.mis-inscripciones {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.mis-inscripciones li {
+  padding: 0.7rem 1rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-left: 4px solid var(--primario);
+  border-radius: var(--radio-sm);
+}
+
+/* Sin movimiento para quien lo ha pedido en su sistema */
+@media (prefers-reduced-motion: reduce) {
+  .tarjeta {
+    transition: none;
+  }
+
+  .tarjeta.destacada {
+    transform: none;
+  }
+}

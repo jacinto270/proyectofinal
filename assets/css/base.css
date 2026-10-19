@@ -1,0 +1,201 @@
+/* ===================================================================
+   base.css — Sistema de diseño común (colores, tipografía, reset)
+   Modo claro por defecto; modo oscuro según el sistema o el botón
+   (atributo data-tema="oscuro" | "claro" en <html>).
+   =================================================================== */
+
+:root {
+  /* Superficies y texto */
+  --fondo: #f6f8f9;
+  --superficie: #ffffff;
+  --superficie-2: #edf2f4;
+  --texto: #132029;
+  --texto-suave: #4f5f6b;
+  --borde: #dbe3e8;
+
+  /* Marca: verde azulado (lagunas) + naranja atardecer */
+  --primario: #0f766e;
+  --primario-hover: #115e59;
+  --sobre-primario: #ffffff;
+  --primario-suave: #d5f5ef;
+  --acento: #ea580c;
+  --acento-texto: #c2410c;
+
+  /* Estados */
+  --error: #b42318;
+  --error-fondo: #fdecea;
+  --ok: #15803d;
+
+  /* Zonas concretas */
+  --cabecera-fondo: rgb(255 255 255 / 0.86);
+  --pie-fondo: #0d1f1e;
+  --pie-texto: #c6d3d9;
+
+  /* Forma */
+  --sombra: 0 1px 2px rgb(15 23 42 / 0.06), 0 8px 24px rgb(15 23 42 / 0.08);
+  --sombra-alta: 0 4px 8px rgb(15 23 42 / 0.08), 0 18px 40px rgb(15 23 42 / 0.16);
+  --radio: 16px;
+  --radio-sm: 8px;
+  --ancho: 1120px;
+
+  /* Tipografía */
+  --fuente-titulos: "Montserrat", system-ui, sans-serif;
+  --fuente-texto: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+
+  color-scheme: light;
+}
+
+/* Modo oscuro automático (si el usuario no ha elegido claro) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) {
+    --fondo: #0b1116;
+    --superficie: #121a21;
+    --superficie-2: #1a252e;
+    --texto: #e6edf2;
+    --texto-suave: #9cabb7;
+    --borde: #26333e;
+    --primario: #2dd4bf;
+    --primario-hover: #5eead4;
+    --sobre-primario: #042f2e;
+    --primario-suave: #123f3b;
+    --acento: #fb923c;
+    --acento-texto: #fdba74;
+    --error: #f87171;
+    --error-fondo: #3a1616;
+    --ok: #4ade80;
+    --cabecera-fondo: rgb(11 17 22 / 0.86);
+    --pie-fondo: #070b0e;
+    --pie-texto: #9cabb7;
+    --sombra: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px rgb(0 0 0 / 0.35);
+    --sombra-alta: 0 4px 8px rgb(0 0 0 / 0.4), 0 18px 40px rgb(0 0 0 / 0.5);
+    color-scheme: dark;
+  }
+}
+
+/* Modo oscuro elegido con el botón */
+:root[data-tema="oscuro"] {
+  --fondo: #0b1116;
+  --superficie: #121a21;
+  --superficie-2: #1a252e;
+  --texto: #e6edf2;
+  --texto-suave: #9cabb7;
+  --borde: #26333e;
+  --primario: #2dd4bf;
+  --primario-hover: #5eead4;
+  --sobre-primario: #042f2e;
+  --primario-suave: #123f3b;
+  --acento: #fb923c;
+  --acento-texto: #fdba74;
+  --error: #f87171;
+  --error-fondo: #3a1616;
+  --ok: #4ade80;
+  --cabecera-fondo: rgb(11 17 22 / 0.86);
+  --pie-fondo: #070b0e;
+  --pie-texto: #9cabb7;
+  --sombra: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px rgb(0 0 0 / 0.35);
+  --sombra-alta: 0 4px 8px rgb(0 0 0 / 0.4), 0 18px 40px rgb(0 0 0 / 0.5);
+  color-scheme: dark;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* para que la cabecera fija no tape los anclajes */
+}
+
+body {
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--fondo);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  line-height: 1.2;
+  color: var(--texto);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 800; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 700; }
+h3 { font-size: 1.15rem; font-weight: 700; }
+
+a {
+  color: var(--primario);
+}
+
+:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Utilidades de maquetación */
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho);
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+.seccion {
+  padding-block: clamp(3rem, 7vw, 5rem);
+}
+
+.seccion-cabecera {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+}
+
+.seccion-cabecera p {
+  color: var(--texto-suave);
+  margin-top: 0.6rem;
+}
+
+.antetitulo {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--acento-texto);
+  margin-bottom: 0.5rem;
+}
+
+.solo-lector {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,25 +1,40 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Tablas de fechas de los cursos */
+.tabla-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  background: var(--superficie);
 }
 
-    
+.tabla {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
 
-#table{
-    text-align: center;
-    width: 80%;
-    border-collapse: collapse;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    background-color: bisque;
-    }
-   
+.tabla th,
+.tabla td {
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+}
 
-th, td{
-    border: 1px solid black;
-    padding: 0.5rem 1rem; 
-    text-align: left;
+.tabla th {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sobre-primario);
+  background: var(--primario);
+}
+
+.tabla td {
+  border-top: 1px solid var(--borde);
+}
+
+.tabla tbody tr:nth-child(even) {
+  background: var(--superficie-2);
+}
+
+.tabla tbody tr:hover {
+  background: var(--primario-suave);
 }

@@ -1,0 +1,67 @@
+/* Botones comunes a toda la web */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.6rem 1.4rem;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--sobre-primario);
+  background: var(--primario);
+  border: 2px solid var(--primario);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+  background: var(--primario-hover);
+  border-color: var(--primario-hover);
+  transform: translateY(-2px);
+}
+
+/* Secundario: solo borde */
+.boton-sec {
+  background: transparent;
+  color: var(--primario);
+}
+
+.boton-sec:hover {
+  color: var(--sobre-primario);
+}
+
+/* Para fondos oscuros o fotos (hero) */
+.boton-claro {
+  background: transparent;
+  color: #fff;
+  border-color: rgb(255 255 255 / 0.8);
+}
+
+.boton-claro:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #0d1f1e;
+}
+
+/* Botón redondo solo con icono (modo oscuro, menú) */
+.boton-icono {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  font-size: 1.1rem;
+  color: var(--texto);
+  background: transparent;
+  border: 1px solid var(--borde);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.boton-icono:hover {
+  background: var(--superficie-2);
+  color: var(--primario);
+}

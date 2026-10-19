@@ -4,128 +4,204 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Club de Montaña A Pata Coja · Granada</title>
+  <meta name="description" content="Club de montaña en Granada desde 2010: cursos de escalada, barranquismo, rapel y rutas guiadas por Sierra Nevada." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/btn.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/tema.js"></script>
 </head>
 
 <body>
-  <header>
-    <nav>
-       <a id="logo" href="index.html">
-        <img src="/assets/img/logo-club.webp" alt="imagen del logo" title="imagen del logo" />
-        
-  <!-- <picture>
-    <source srcset="/assets/img/logo-club.avif" type="image/avif">
-    <source srcset="/assets/img/logo-club.webp" type="image/webp">
-    <img src="/assets/img/logo-club.jpg" alt="logo del club">
-  </picture> -->
-  
-
+  <header class="site-header">
+    <div class="topbar">
+      <div class="contenedor topbar-inner">
+        <a href="tel:+34645676987"><i class="fa-solid fa-phone" aria-hidden="true"></i>+34 645 67 69 87</a>
+        <a class="topbar-email" href="mailto:apatacoja-montañeros@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>apatacoja-montañeros@gmail.com</a>
+        <a href="https://maps.app.goo.gl/Ps1vS6Fa8XXHBqvt8" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>C/ del Olivo s/n</a>
+      </div>
+    </div>
+    <nav class="contenedor nav" aria-label="Principal">
+      <a id="logo" href="index.html">
+        <picture>
+          <source srcset="assets/img/logo-club.avif" type="image/avif">
+          <source srcset="assets/img/logo-club.webp" type="image/webp">
+          <img src="assets/img/logo-club.png" alt="Logo del Club de Montaña A Pata Coja" width="54" height="54">
+        </picture>
+        <span>A Pata Coja<br><small>Club de Montaña</small></span>
       </a>
-        
-      <div class="nav-menu">
-       
-       <div><a href="tel:+34645676987"><i class="fa-solid fa-phone"></i>+34 645 67 69 87</a></div>
-
-       <div><a href="mailto:apatacoja-montañeros@gmail.com"><i
-            class="fa-solid fa-square-envelope"></i>apatacoja-montañeros@gmail.com</a></div>
-
-        <div><a href="https://maps.app.goo.gl/Ps1vS6Fa8XXHBqvt8" target="_blank"><i
-            class="fa-solid fa-location-dot"></i>c/del olivo s/n</a></div>
-
+      <div class="nav-acciones">
+        <ul id="menu" class="nav-links">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="formulario.html" class="boton">Inscripciones</a></li>
+        </ul>
+        <button id="boton-tema" class="boton-icono" type="button" aria-label="Activar modo oscuro"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
+        <button id="boton-menu" class="boton-icono nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
       </div>
-      
-      <div>
-        <a href="/index.html" class="button">inicio</a>
-      </div>
-
-      <div>
-        <a href="#cursos" class="button">cursos</a>
-      </div>
-
-      <div>
-        <a href="inscripciones.html" class="button">inscripciones</a>
-      </div>
-
     </nav>
   </header>
-  <main>
-    <div class="leyenda">
-      <h2>
 
-        Nuestro club nace en 2010 con un unico sueño disfrutar de la
-        naturaleza en todas sus variantes ¡únete a nosotros y comparte con
-        nosotros el camino!
-      </h2>
-      <h3>
-        vente con nosotros a san fernando un ratito a pie y otro caminando...
-      </h3>
-    </div>
-    <section id="club-de-montana-a-pata-coja">
-      <h1>club de montaña a pata coja</h1>
-    </section>
-    <section id="cursos">
-      <h2>cursos</h2>
-      <div class="cursos">
-        <div class="tarjeta-cursos">
-          <img src="assets/img/curso-de-escalada.jpg" alt="persona escalando via aerea" title="persona escalando via aerea" />
-          <h2>cursos de escalada</h2>
-          <p>atrevete a llegar a lo mas alto</p>
-          <a href="curso-escalada.html">
-            <button>ver mas</button>
-          </a>
-        </div>
-        <div class="tarjeta-cursos">
-          <img src="assets/img/barranquismo.jpg" alt="grupo de personas en via ferrata" title="grupo de personas en via ferrata" />
-          <h2>barranquismo</h2>
-          <p>
-            ¡mòjate! y desciente por los rios mas impresionantes de granada
-          </p>
-          <a href="barranquismo.html">
-            <button>ver mas</button>
-          </a>
-        </div>
-        <div class="tarjeta-cursos">
-          <img src="assets/img/excursionismo.jpg" alt="grupo de personas en ruta de montaña" title="grupo de personas en ruta de montaña"/>
-          <h2>rutas guiadas</h2>
-          <p>
-            descrube de la manos de nuestros guias los rincones mas bonitos de
-            las sierras granadina
-          </p>
-           <a href="rutas-guiadas.html">
-            <button>ver mas</button>
-          </a>
-        </div>
-        <div class="tarjeta-cursos">
-          <img src="assets/img/rappel.jpg" alt="persona en descenso pared vertical" title="persona en descenso pared vertical"/>
-          <h2>rapel</h2>
-          <p>!!!Si no te atreves a subir¡¡¡ ¡¡¡Atrévete a bajar!!!</p>
-           <a href="rapel.html">
-            <button>ver mas</button>
-          </a>
+  <main>
+    <section class="hero">
+      <img src="assets/img/sierra-nevada-fondo-de-pantalla.jpg" alt="" fetchpriority="high">
+      <div class="contenedor hero-contenido">
+        <span class="antetitulo">Granada · desde 2010</span>
+        <h1>Club de Montaña A Pata Coja</h1>
+        <p class="hero-lema">
+          Nuestro club nació en 2010 con un único sueño: disfrutar de la naturaleza en todas sus variantes.
+          ¡Únete y comparte el camino con nosotros!
+        </p>
+        <p class="hero-cita">«Vente con nosotros a San Fernando, un ratito a pie y otro caminando…»</p>
+        <div class="hero-acciones">
+          <a href="formulario.html" class="boton"><i class="fa-solid fa-person-hiking" aria-hidden="true"></i>Inscríbete</a>
+          <a href="#cursos" class="boton boton-claro">Ver cursos</a>
         </div>
       </div>
     </section>
-    
-  </main>
-  <footer id="footer">
-    <div class="redes-sociales">
-      <p id="anio"></p>
-      <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-      <a href=""><i class="fa-brands fa-facebook"></i></a>
-      <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-      <a href=""><i class="fa-brands fa-telegram"></i></a>
-    </div>
-    <div class="politicas">
-      <a href="#">politicas de privacidad</a>
-      <a href="#">aviso legal</a>
-      <a href="#">politica de cookies</a>
-    </div>
 
+    <section id="cursos" class="seccion">
+      <div class="contenedor">
+        <div class="seccion-cabecera">
+          <span class="antetitulo">Temporada</span>
+          <h2>Nuestros cursos</h2>
+          <p>Actividades para todos los niveles, con guías titulados y el material de seguridad incluido.</p>
+        </div>
+
+        <div class="cursos">
+          <article class="tarjeta-cursos">
+            <div class="tarjeta-imagen">
+              <img src="assets/img/curso-de-escalada.jpg" alt="Persona escalando una vía en pared" loading="lazy" />
+            </div>
+            <div class="tarjeta-cuerpo">
+              <h3>Curso de escalada</h3>
+              <p>Atrévete a llegar a lo más alto.</p>
+              <a href="curso-escalada.html" class="boton boton-sec">Ver más <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="tarjeta-cursos">
+            <div class="tarjeta-imagen">
+              <img src="assets/img/barranquismo.jpg" alt="Grupo de personas descendiendo un barranco" loading="lazy" />
+            </div>
+            <div class="tarjeta-cuerpo">
+              <h3>Barranquismo</h3>
+              <p>¡Mójate! y desciende por los ríos más impresionantes de Granada.</p>
+              <a href="barranquismo.html" class="boton boton-sec">Ver más <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="tarjeta-cursos">
+            <div class="tarjeta-imagen">
+              <img src="assets/img/excursionismo.jpg" alt="Grupo de personas en una ruta de montaña" loading="lazy" />
+            </div>
+            <div class="tarjeta-cuerpo">
+              <h3>Rutas guiadas</h3>
+              <p>Descubre de la mano de nuestros guías los rincones más bonitos de las sierras granadinas.</p>
+              <a href="rutas-guiadas.html" class="boton boton-sec">Ver más <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="tarjeta-cursos">
+            <div class="tarjeta-imagen">
+              <img src="assets/img/rappel.jpg" alt="Persona descendiendo una pared vertical en rapel" loading="lazy" />
+            </div>
+            <div class="tarjeta-cuerpo">
+              <h3>Rapel</h3>
+              <p>¡Si no te atreves a subir, atrévete a bajar!</p>
+              <a href="rapel.html" class="boton boton-sec">Ver más <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion ventajas-fondo">
+      <div class="contenedor">
+        <div class="seccion-cabecera">
+          <span class="antetitulo">El club</span>
+          <h2>¿Por qué elegirnos?</h2>
+        </div>
+        <div class="ventajas">
+          <div class="ventaja">
+            <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+            <h3>Guías titulados</h3>
+            <p>Profesionales con años de experiencia en Sierra Nevada.</p>
+          </div>
+          <div class="ventaja">
+            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+            <h3>Grupos reducidos</h3>
+            <p>Atención personalizada y un ambiente cercano.</p>
+          </div>
+          <div class="ventaja">
+            <i class="fa-solid fa-helmet-safety" aria-hidden="true"></i>
+            <h3>Material incluido</h3>
+            <p>Cascos, arneses y cuerdas homologados en cada actividad.</p>
+          </div>
+          <div class="ventaja">
+            <i class="fa-solid fa-mountain-sun" aria-hidden="true"></i>
+            <h3>Desde 2010</h3>
+            <p>Más de una década compartiendo montaña en Granada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="cta">
+          <div>
+            <h2>¿Te animas a la próxima salida?</h2>
+            <p>Reserva tu plaza en un minuto. ¡Nos vemos en la montaña!</p>
+          </div>
+          <a href="formulario.html" class="boton">Inscribirme</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="site-footer">
+    <div class="contenedor footer-grid">
+      <div>
+        <div class="footer-marca">
+          <img src="assets/img/logo-club.webp" alt="" width="48" height="48">
+          <span>Club de Montaña<br>A Pata Coja</span>
+        </div>
+        <p>Disfrutar de la naturaleza en todas sus variantes, en buena compañía.</p>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul class="footer-lista">
+          <li><a href="tel:+34645676987"><i class="fa-solid fa-phone" aria-hidden="true"></i>+34 645 67 69 87</a></li>
+          <li><a href="mailto:apatacoja-montañeros@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Escríbenos</a></li>
+          <li><a href="https://maps.app.goo.gl/Ps1vS6Fa8XXHBqvt8" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>C/ del Olivo s/n</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Síguenos</h3>
+        <div class="redes-sociales">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="contenedor footer-inferior">
+      <p>© <span id="anio"></span> Club de Montaña A Pata Coja</p>
+      <div class="politicas">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Aviso legal</a>
+        <a href="#">Política de cookies</a>
+      </div>
+    </div>
   </footer>
-  <script src="/assets/js/app.js"></script>
 </body>
 
 </html>
